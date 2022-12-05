@@ -18,27 +18,27 @@
                     </div>
                 </div>
             </nav>
-            @if (session('success'))
-                <div class="alert alert-success">
-                    {{ session('success') }}
-                </div>
-            @endif
-            @if (session('successUpdate'))
-                <div class="alert alert-success">
-                    {{ session('successUpdate') }}
-                </div>
-            @endif
-            @if (session('delete'))
-                <div class="alert alert-danger">
-                    {{ session('delete') }}
-                </div>
-            @endif
             <div class="row" style="margin-top: 90px">
                 <div class="col">
                     <h2>CRUD Komputer</h2>
                     <div class="my-3">
                         <a href="{{ route('create') }}" class="btn btn-success">Create</a>
                     </div>
+                    @if (session('success'))
+                        <div class="alert alert-success">
+                            {{ session('success') }}
+                        </div>
+                    @endif
+                    @if (session('successUpdate'))
+                        <div class="alert alert-success">
+                            {{ session('successUpdate') }}
+                        </div>
+                    @endif
+                    @if (session('delete'))
+                        <div class="alert alert-danger">
+                            {{ session('delete') }}
+                        </div>
+                    @endif
                     <table class="table text-center">
                         <thead>
                             <tr>
@@ -66,7 +66,7 @@
                                         <form action="{{ route('delete', $item->id) }}" method="post">
                                             @csrf
                                             @method('delete')
-                                            <button class="bi bi-trash btn" type="submit"></button>
+                                            <button class="bi bi-trash btn " type="submit"></button>
                                         </form>
                                     </td>
                                 </tr>
