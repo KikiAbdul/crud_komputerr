@@ -4,7 +4,7 @@
     <div class="container">
         <div class="row">
             <div class="col">
-                <h2>halaman home</h2>
+                bg.png
             </div>
         </div>
     </div>
