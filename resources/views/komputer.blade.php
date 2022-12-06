@@ -16,7 +16,7 @@
                     <div class="container">
                         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                             <div class="navbar-nav">
-                                <a class="nav-link active" aria-current="page" href="/home">Home</a>
+                                <a class="nav-link active" aria-current="page" href="/home">Ruang Penempatan Laptop</a>
                                 <a class="nav-link" href="#">Features</a>
                             </div>
                         </div>
@@ -26,7 +26,7 @@
                     <div class="col">
                         <h2>CRUD Komputer</h2>
                         <div class="my-3">
-                            <a href="{{ route('create') }}" class="btn btn-success">Create</a>
+                            <a href="{{ route('create') }}" class="btn btn-light bi bi-send-plus"></a>
                         </div>
                         @if (session('success'))
                             <div class="alert alert-success">

@@ -21,7 +21,8 @@ class KomputerController extends Controller
 
     public function home()
     {
-        return view('home');
+        $komputers =Komputer::all();
+        return view('home',compact('komputers'));
     }
 
     public function komputer()

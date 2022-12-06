@@ -7,7 +7,7 @@
                 <h2>Create Komputer</h2>
             </div>
             <div class="my-3">
-                <a class="btn btn-primary" href="{{ route('komputer') }}">Back</a>
+                <a class="btn btn-light mt-3 bi bi-arrow-left" href="{{ route('komputer') }}">Back</a>
             </div>
             <form action="{{ route('store') }}" method="post">
                 @csrf
