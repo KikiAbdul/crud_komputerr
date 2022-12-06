@@ -26,7 +26,7 @@
                     <div class="col">
                         <h2>CRUD Komputer</h2>
                         <div class="my-3">
-                            <a href="{{ route('create') }}" class="btn btn-light bi bi-send-plus"></a>
+                            <a href="{{ route('create') }}" class="btn btn-light bi bi-send-plus"> Create disini</a>
                         </div>
                         @if (session('success'))
                             <div class="alert alert-success">
