@@ -17,7 +17,7 @@
                         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                             <div class="navbar-nav">
                                 <a class="nav-link active" aria-current="page" href="/home">Ruang Penempatan Laptop</a>
-                                <a class="nav-link" href="#">Date</a>
+                                <a class="nav-link" href="/komputer_rusak">Komputer Rusak</a>
                             </div>
                         </div>
                     </div>

@@ -17,6 +17,7 @@ use App\Http\Controllers\KomputerController;
 Route::get('/',[KomputerController::class, 'index']);
 Route::get('/home',[KomputerController::class, 'home'])->name('home');
 Route::get('/komputer',[KomputerController::class, 'komputer'])->name('komputer');
+Route::get('/komputer_rusak{id}', [KomputerController::class, 'komputer_rusak'])->name('komputer_rusak');
 Route::get('/create',[KomputerController::class, 'create'])->name('create');
 Route::post('/store',[KomputerController::class, 'store'])->name('store');
 

@@ -12,7 +12,7 @@
                 <hr style="width: 300px" class="rounded mx-auto d-block">
             </div>
             <a class="btn btn-light mt-3 bi bi-arrow-left" style="width: 100px" href="/komputer">Back</a>
-            <div class="row mt-5"   data-aos="fade-down">
+            <div class="row mt-5" data-aos="fade-down">
                 @foreach ($komputers as $item)
                     <div class="col-4">
                         <div class="card shadow p-0 mb-5 bg-body rounded" style="width: 18rem;">
@@ -23,6 +23,9 @@
                                     <a>Nomor Komputer: {{ $item->no_komputer }}</a><br>
                                     <a>Ruang Penempatan: {{ $item->ruang_penempatan }}</a>
                                 </div>
+                                <form action="{{ route('home') }}" method="post">
+                                    <button type="submit" class="btn btn-light rounded float-end">Rusak</button>
+                                </form>
                             </div>
                         </div>
                     </div>

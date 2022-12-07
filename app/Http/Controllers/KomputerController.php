@@ -31,6 +31,12 @@ class KomputerController extends Controller
         return view('komputer',compact('komputers'));
     }
 
+    public function komputer_rusak()
+    {
+        return view('komputer_rusak');
+    }
+
+
     /**
      * Show the form for creating a new resource.
      *
