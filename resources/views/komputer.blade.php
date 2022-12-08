@@ -25,8 +25,8 @@
                 <div class="row" style="margin-top: 90px">
                     <div class="col">
                         <h2>CRUD Komputer</h2>
-                        <div class="my-3">
-                            <a href="{{ route('create') }}" class="btn btn-light bi bi-send-plus"> Create disini</a>
+                        <div class="my-md-3">
+                            <a href="{{ route('create') }}" class="btn btn-light bi bi-send-plus"> Tambah Komputer</a>
                         </div>
                         @if (session('success'))
                             <div class="alert alert-success">
@@ -61,6 +61,7 @@
                                         <td>{{ $item->no_komputer }}</td>
                                         <td>{{ $item->merk_komputer }}</td>
                                         <td>{{ $item->ruang_penempatan }}</td>
+                                        {{-- <td>{{ $item->kondisi_komputer }}</td> --}}
                                         <td>
                                             <div class="d-flex justify-content-center">
                                                 <form action="{{ route('edit', $item->id) }}">

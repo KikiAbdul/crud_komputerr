@@ -33,7 +33,17 @@ class KomputerController extends Controller
 
     public function komputer_rusak()
     {
-        return view('komputer_rusak');
+        $komputers = Komputer::all();
+        return view('komputer_rusak',compact('komputers'));
+    }
+
+    public function updateKomputerRusak($id)
+    {
+        Komputer::where('id','=',$id)->update([
+            'komputer_rusak' => 0
+        ]);
+
+        return redirect()->back()->with('done', 'komputer rusak');
     }
 
 

@@ -23,9 +23,14 @@
                                     <a>Nomor Komputer: {{ $item->no_komputer }}</a><br>
                                     <a>Ruang Penempatan: {{ $item->ruang_penempatan }}</a>
                                 </div>
-                                <form action="{{ route('home') }}" method="post">
+                                {{-- <form action="{{ route('updateKomputerRusak', $item->id) }}" method="post">
+                                @csrf
+                                @method('patch')
+                                <button type="submit" class="btn btn-light">Rusak</button>
+                                </form> --}}
+                                {{-- <form action="/komputer_rusak" method="post">
                                     <button type="submit" class="btn btn-light rounded float-end">Rusak</button>
-                                </form>
+                                </form> --}}
                             </div>
                         </div>
                     </div>
