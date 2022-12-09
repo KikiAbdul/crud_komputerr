@@ -22,14 +22,12 @@
                                 <div class="class">
                                     <a>Nomor Komputer: {{ $item->no_komputer }}</a><br>
                                     <a>Ruang Penempatan: {{ $item->ruang_penempatan }}</a>
+                                    <a>Kondisi Komputer: {{ $item->kondisi_komputer }}</a>
                                 </div>
-                                {{-- <form action="{{ route('updateKomputerRusak', $item->id) }}" method="post">
-                                @csrf
-                                @method('patch')
-                                <button type="submit" class="btn btn-light">Rusak</button>
-                                </form> --}}
-                                {{-- <form action="/komputer_rusak" method="post">
-                                    <button type="submit" class="btn btn-light rounded float-end">Rusak</button>
+                                {{-- <form action="{{ route('komputer_rusak', $item->id) }}" method="POST">
+                                    @csrf
+                                    @method('patch')
+                                    <button type="submit" class="btn btn-light" style="margin-left: 190px">Rusak</button>
                                 </form> --}}
                             </div>
                         </div>

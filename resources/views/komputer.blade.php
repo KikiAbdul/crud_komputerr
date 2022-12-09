@@ -17,7 +17,7 @@
                         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                             <div class="navbar-nav">
                                 <a class="nav-link active" aria-current="page" href="/home">Ruang Penempatan Laptop</a>
-                                <a class="nav-link" href="/komputer_rusak">Komputer Rusak</a>
+                                {{-- <a class="nav-link" href="/komputer_rusak">Komputer Rusak</a> --}}
                             </div>
                         </div>
                     </div>
@@ -39,7 +39,7 @@
                             </div>
                         @endif
                         @if (session('delete'))
-                            <div class="alert alert-danger">
+                            <div class="alert alert-success">
                                 {{ session('delete') }}
                             </div>
                         @endif
@@ -50,6 +50,7 @@
                                     <th scope="col">No Komputer</th>
                                     <th scope="col">Merk Komputer</th>
                                     <th scope="col">Ruang Penempatan Komputer</th>
+                                    <th scope="col">Kondisi Komputer</th>
                                     <th scope="col">Action</th>
                                 </tr>
                             </thead>
@@ -61,6 +62,7 @@
                                         <td>{{ $item->no_komputer }}</td>
                                         <td>{{ $item->merk_komputer }}</td>
                                         <td>{{ $item->ruang_penempatan }}</td>
+                                        <td>{{ $item->kondisi_komputer }}</td>
                                         {{-- <td>{{ $item->kondisi_komputer }}</td> --}}
                                         <td>
                                             <div class="d-flex justify-content-center">

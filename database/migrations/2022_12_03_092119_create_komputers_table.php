@@ -18,6 +18,7 @@ return new class extends Migration
             $table->integer('no_komputer');
             $table->string('merk_komputer');
             $table->string('ruang_penempatan')->nullable();
+            $table->string('kondisi_komputer')->nullable();
             $table->timestamps();
         });
     }

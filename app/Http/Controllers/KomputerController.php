@@ -30,21 +30,20 @@ class KomputerController extends Controller
         $komputers = Komputer::all();
         return view('komputer',compact('komputers'));
     }
+    // public function komputer_rusak()
+    // {
+    //     $komputers = Komputer::all();
+    //     return view('komputer_rusak',compact('komputers'));
+    // }
 
-    public function komputer_rusak()
-    {
-        $komputers = Komputer::all();
-        return view('komputer_rusak',compact('komputers'));
-    }
+    // public function updateKomputerRusak($id)
+    // {
+    //     Komputer::where('id','=',$id)->update([
+    //         'komputer_rusak' => 1   
+    //     ]);
 
-    public function updateKomputerRusak($id)
-    {
-        Komputer::where('id','=',$id)->update([
-            'komputer_rusak' => 0
-        ]);
-
-        return redirect()->back()->with('done', 'komputer rusak');
-    }
+    //     return redirect()->back()->with('done', 'komputer rusak');
+    // }
 
 
     /**
@@ -75,6 +74,7 @@ class KomputerController extends Controller
         'no_komputer' => $request->no_komputer,
         'merk_komputer' => $request->merk_komputer,
         'ruang_penempatan' => 0,
+        'kondisi_komputer'=> 0
        ]);
       return redirect('/komputer')->with('success','Berhasil menambah data komputer!');
     }
@@ -118,11 +118,13 @@ class KomputerController extends Controller
             'no_komputer' => 'required',
             'merk_komputer' => 'required',
             'ruang_penempatan' => 'required',
+            'kondisi_komputer' => 'required',
         ]);
 
         Komputer::where('id',$id)->update([
             'no_komputer' => $request->no_komputer,
             'merk_komputer' => $request->merk_komputer,
+            'kondisi_komputer' => $request->kondisi_komputer,
             'ruang_penempatan' => $request->ruang_penempatan,
         ]);
 

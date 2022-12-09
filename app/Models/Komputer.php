@@ -12,5 +12,6 @@ class Komputer extends Model
         'no_komputer',
         'merk_komputer',
         'ruang_penempatan',
+        'kondisi_komputer',
     ];
 }

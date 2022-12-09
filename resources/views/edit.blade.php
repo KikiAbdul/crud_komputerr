@@ -22,12 +22,25 @@
                     <input type="text" class="form-control" id="merk" name="merk_komputer" required
                         value="{{ $komputers->merk_komputer }}">
                 </div>
-                <div class="mb-3">
+                <select class="form-select" aria-label="Default select example" name="ruang_penempatan">
+                    <option hidden>Pilih Ruangan</option>
+                    <option value="206">206</option>
+                    <option value="207">207</option>
+                    <option value="210">210</option>
+                    <option value="202">202</option>
+                    <option value="321">321</option>
+                </select>
+                <select class="form-select mt-3" aria-label="Default select example" name="kondisi_komputer">
+                    <option hidden>Kondisi Komputer</option>
+                    <option value="Baik">Baik</option>
+                    <option value="Rusak">Rusak</option>
+                </select>
+                {{-- <div class="mb-3">
                     <label for="ruang">Ruang Penempatan</label>
                     <input type="text" class="form-control" id="ruang" name="ruang_penempatan" required
                         value="{{ $komputers->ruang_penempatan }}">
-                </div>
-                <button class="btn btn-primary" type="submit">Submit</button>
+                </div> --}}
+                <button class="btn btn-primary mt-2" type="submit">Submit</button>
             </form>
         </div>
     </div>
