@@ -17,8 +17,8 @@ return new class extends Migration
             $table->id();
             $table->integer('no_komputer');
             $table->string('merk_komputer');
-            $table->string('ruang_penempatan')->nullable();
-            $table->string('kondisi_komputer')->nullable();
+            $table->string('ruang_penempatan')->default('Belumditempatkan');
+            $table->string('kondisi_komputer')->default('kondisibelumditentukan');
             $table->timestamps();
         });
     }

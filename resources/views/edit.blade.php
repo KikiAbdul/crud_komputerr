@@ -23,7 +23,8 @@
                         value="{{ $komputers->merk_komputer }}">
                 </div>
                 <select class="form-select" aria-label="Default select example" name="ruang_penempatan">
-                    <option hidden>Pilih Ruangan</option>
+                    <option hidden value="{{ $komputers->ruang_penempatan }}">Ruangan Penempatan
+                        {{ $komputers->ruang_penempatan }}</option>
                     <option value="206">206</option>
                     <option value="207">207</option>
                     <option value="210">210</option>
@@ -31,7 +32,8 @@
                     <option value="321">321</option>
                 </select>
                 <select class="form-select mt-3" aria-label="Default select example" name="kondisi_komputer">
-                    <option hidden>Kondisi Komputer</option>
+                    <option hidden value="{{ $komputers->kondisi_komputer }}">Kondisi Komputer
+                        {{ $komputers->kondisi_komputer }}</option>
                     <option value="Baik">Baik</option>
                     <option value="Rusak">Rusak</option>
                 </select>
