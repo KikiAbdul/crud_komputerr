@@ -19,7 +19,12 @@
                     <label for="merk">Merek Komputer</label>
                     <input type="text" class="form-control" id="merk" name="merk_komputer" required>
                 </div>
-                <button class="btn btn-primary" type="submit">Submit</button>
+                <select class="form-select mt-3" aria-label="Default select example" name="kondisi_komputer">
+                    <option hidden>Kondisi Komputer</option>
+                    <option value="Baik">Baik</option>
+                    <option value="Rusak">Rusak</option>
+                </select>
+                <button class="btn btn-primary mt-3" type="submit">Submit</button>
             </form>
         </div>
     </div>

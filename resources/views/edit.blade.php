@@ -32,8 +32,7 @@
                     <option value="321">321</option>
                 </select>
                 <select class="form-select mt-3" aria-label="Default select example" name="kondisi_komputer">
-                    <option hidden value="{{ $komputers->kondisi_komputer }}">Kondisi Komputer
-                        {{ $komputers->kondisi_komputer }}</option>
+                    <option value="{{ $komputers->kondisi_komputer }}" hidden>{{ $komputers->kondisi_komputer }}</option>
                     <option value="Baik">Baik</option>
                     <option value="Rusak">Rusak</option>
                 </select>

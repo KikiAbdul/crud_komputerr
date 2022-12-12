@@ -16,19 +16,19 @@ class KomputerController extends Controller
      */
     public function index()
     {
-       return view('layout');
+        return view('layout');
     }
 
     public function home()
     {
-        $komputers =Komputer::all();
-        return view('home',compact('komputers'));
+        $komputers = Komputer::all();
+        return view('home', compact('komputers'));
     }
 
     public function komputer()
     {
         $komputers = Komputer::all();
-        return view('komputer',compact('komputers'));
+        return view('komputer', compact('komputers'));
     }
     // public function komputer_rusak()
     // {
@@ -54,7 +54,7 @@ class KomputerController extends Controller
     public function create()
     {
         $komputers = Komputer::all();
-        return view('create',compact('komputers'));
+        return view('create', compact('komputers'));
     }
 
     /**
@@ -65,18 +65,22 @@ class KomputerController extends Controller
      */
     public function store(Request $request)
     {
-       $validated = $request->validate([
-        'no_komputer' => 'required',
-        'merk_komputer' => 'required',
-       ]);
-
-       Komputer::create([
-        'no_komputer' => $request->no_komputer,
-        'merk_komputer' => $request->merk_komputer,
-        'ruang_penempatan' => 0,
-        'kondisi_komputer'=> 0
-       ]);
-      return redirect('/komputer')->with('success','Berhasil menambah data komputer!');
+        //menyimpan data ke database
+        //tes koneksi blade dengan controller
+        //validasi data
+        $validated = $request->validate([
+            'no_komputer' => 'required',
+            'merk_komputer' => 'required',
+            'kondisi_komputer' => 'required',
+        ]);
+        //mengirim data ke dalam database
+        Komputer::create([
+            'no_komputer' => $request->no_komputer,
+            'merk_komputer' => $request->merk_komputer,
+            'ruang_penempatan' => "",
+            'kondisi_komputer' => $request->kondisi_komputer,
+        ]);
+        return redirect('/komputer')->with('success', 'Berhasil menambah data komputer!');
     }
 
     /**
@@ -100,9 +104,9 @@ class KomputerController extends Controller
     {
         // Menampilkan halaman input form edit 
         // Mengambil data satu baris ketika column id pada baris tersebut sama dengan id dari parameter route
-        $komputers = Komputer::where('id',$id)->first();
+        $komputers = Komputer::where('id', $id)->first();
         // kirim data yang diambil ke file blade dengan compact
-        return view('edit',compact('komputers'));
+        return view('edit', compact('komputers'));
     }
 
     /**
@@ -121,14 +125,14 @@ class KomputerController extends Controller
             'kondisi_komputer' => 'required',
         ]);
 
-        Komputer::where('id',$id)->update([
+        Komputer::where('id', $id)->update([
             'no_komputer' => $request->no_komputer,
             'merk_komputer' => $request->merk_komputer,
             'kondisi_komputer' => $request->kondisi_komputer,
             'ruang_penempatan' => $request->ruang_penempatan,
         ]);
 
-        return redirect('komputer')->with('successUpdate','Data komputer berhasil diperbarui!');
+        return redirect('komputer')->with('successUpdate', 'Data komputer berhasil diperbarui!');
     }
 
     /**
@@ -140,6 +144,6 @@ class KomputerController extends Controller
     public function destroy($id)
     {
         Komputer::find($id)->delete();
-        return redirect('/komputer')->with('delete','Berhasil di hapus!');
+        return redirect('/komputer')->with('delete', 'Berhasil di hapus!');
     }
 }

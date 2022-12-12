@@ -21,7 +21,7 @@
                                 <h5 class="card-title">Merk Komputer: {{ $item->merk_komputer }}</h5>
                                 <div class="class">
                                     <a>Nomor Komputer: {{ $item->no_komputer }}</a><br>
-                                    <a>Ruang Penempatan: {{ $item->ruang_penempatan }}</a>
+                                    <a>Ruang Penempatan: {{ $item->ruang_penempatan }}</a><br>
                                     <a>Kondisi Komputer: {{ $item->kondisi_komputer }}</a>
                                 </div>
                                 {{-- <form action="{{ route('komputer_rusak', $item->id) }}" method="POST">
